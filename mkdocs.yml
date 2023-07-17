@@ -1,0 +1,63 @@
+site_name: Asynchronous PS4 Controller
+# site_url: https://testing
+repo_url: https://github.com/GeomKid/AsyncPyPS4Controller
+# theme:
+#   name: material
+
+nav:
+  - Home: index.md
+  - About: about.md
+
+repo_name: /GeomKid/AsyncPyPS4Controller
+copyright: Copyright &copy; 2023 - Present Tan Chin Peng – <a href="#__consent">Change cookie settings</a>
+docs_dir: docs/src
+edit_uri: edit/stable/docs/src
+
+theme:
+  name: material
+  #  custom_dir: docs/overrides
+  features:
+    - header.autohide
+    - navigation.instant
+    - navigation.top
+    - navigation.tabs
+    - search.suggest
+    - search.share
+    - navigation.indexes
+    - navigation.prune
+    - toc.follow
+    - content.tooltips
+    - content.code.annotate
+    - content.action.edit
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  icon:
+    repo: fontawesome/brands/github-alt
+
+  logo: images/logo-minified.svg
+  font:
+    code: Roboto Mono
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/GeomKid/AsyncPyPS4Controller
+      name: Github Repository

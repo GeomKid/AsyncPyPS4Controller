@@ -1,0 +1,24 @@
+[tool.poetry]
+name="AsynchronousPS4Controller"
+version = "0.0.1"
+description = "A package to suit your non-blocking PS4 interface"
+authors = [
+  { name="Tan Chin Peng", email="huntiktan188@gmail.com" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+aiofiles = "^23.1.0"
+tomli = "^2.0.1"
+
+[build-system]
+requires = [
+    "setuptools",
+    "tomli",
+]
+build-backend = "setuptools.build_meta"
+
+[tools.coverage.run]
+source = [
+    "AsynchronousPS4Controller",
+]
