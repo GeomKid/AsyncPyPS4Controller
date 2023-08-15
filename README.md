@@ -51,7 +51,7 @@ Lets say you want print "Hello world" on X press and "Goodbye world" on X releas
             print("Goodbye world")
 
 
-    controller = MyController(path="/dev/input/js0", debug = True)
+    controller = MyController(path="/dev/input/js0")
 
     # you can start listening before controller is paired, as long as you pair it within the timeout window
     asyncio.run(controller.listen(timeout=30))
@@ -133,7 +133,7 @@ class MyController(Controller):
         Controller.__init__(self, **kwargs)
 
 
-controller = MyController(interface="/dev/input/js0", connecting_using_ds4drv=False)
+controller = MyController(interface="/dev/input/js0")
 asyncio.run(controller.listen(timeout=30,connect_callback=connect, disconnect_callback=disconnect,timeout_callback=timeout))
 ```
 
