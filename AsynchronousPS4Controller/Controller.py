@@ -78,7 +78,7 @@ class BaseController:
         """
         print("on_L1_release")
 
-    async def on_L2_press(self, value):
+    async def on_L2_press(self, value: int):
         """
         Function that is runned when L2 button is released
 
@@ -105,7 +105,7 @@ class BaseController:
         """
         print("on_R1_release")
 
-    async def on_R2_press(self, value):
+    async def on_R2_press(self, value: int):
         """
         Function that is runned when R2 button is released
 
