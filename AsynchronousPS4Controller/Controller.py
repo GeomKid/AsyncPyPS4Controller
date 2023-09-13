@@ -156,7 +156,7 @@ class BaseController:
         """
         print("on_left_right_arrow_release")
 
-    async def on_L3_up(self, value):
+    async def on_L3_up(self, value: int):
         """
         Function that is runned when Left Joystick (L3) is pushed up
 
@@ -165,7 +165,7 @@ class BaseController:
         """
         print(f"on_L3_up: {value}")
 
-    async def on_L3_down(self, value):
+    async def on_L3_down(self, value: int):
         """
         Function that is runned when Left Joystick (L3) is pushed down
 
@@ -174,7 +174,7 @@ class BaseController:
         """
         print(f"on_L3_down: {value}")
 
-    async def on_L3_left(self, value):
+    async def on_L3_left(self, value: int):
         """
         Function that is runned when Left Joystick (L3) is pushed left
 
@@ -183,7 +183,7 @@ class BaseController:
         """
         print(f"on_L3_left: {value}")
 
-    async def on_L3_right(self, value):
+    async def on_L3_right(self, value: int):
         """
         Function that is runned when Left Joystick (L3) is pushed right
 
@@ -216,7 +216,7 @@ class BaseController:
         """
         print("on_L3_release")
 
-    async def on_R3_up(self, value):
+    async def on_R3_up(self, value: int):
         """
         Function that is runned when Right Joystick (R3) is pushed up
 
@@ -225,7 +225,7 @@ class BaseController:
         """
         print(f"on_R3_up: {value}")
 
-    async def on_R3_down(self, value):
+    async def on_R3_down(self, value: int):
         """
         Function that is runned when Right Joystick (R3) is pushed down
 
@@ -234,7 +234,7 @@ class BaseController:
         """
         print(f"on_R3_down: {value}")
 
-    async def on_R3_left(self, value):
+    async def on_R3_left(self, value: int):
         """
         Function that is runned when Right Joystick (R3) is pushed left
 
@@ -243,7 +243,7 @@ class BaseController:
         """
         print(f"on_R3_left: {value}")
 
-    async def on_R3_right(self, value):
+    async def on_R3_right(self, value: int):
         """
         Function that is runned when Right Joystick (R3) is pushed right
 
@@ -317,7 +317,7 @@ class Controller(BaseController):
     def __init__(
         self,
         path: str,
-        debug=False,
+        debug: bool = False,
         re_listen: bool = False,
     ):
         """
@@ -379,8 +379,8 @@ class Controller(BaseController):
     async def listen(
         self,
         timeout=30,
-        connect_callback=None,
-        disconnect_callback=None,
+        connect_callback: Callable = None,
+        disconnect_callback: Callable = None,
         timeout_callback: Callable = None,
         re_listen: bool = False,
     ):
@@ -430,7 +430,7 @@ class Controller(BaseController):
 
     async def re_connect(
         self,
-        connect_callback=None,
+        connect_callback: Callable = None,
     ):
         """
         Reconnect to the `self.path` given
