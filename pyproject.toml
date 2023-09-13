@@ -1,6 +1,6 @@
 [tool.poetry]
 name="AsynchronousPS4Controller"
-version = "0.0.1"
+version = "0.1.0"
 description = "A package to suit your non-blocking PS4 interface"
 authors = [
   { name="Tan Chin Peng", email="huntiktan188@gmail.com" },
