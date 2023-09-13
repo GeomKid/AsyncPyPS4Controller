@@ -14,6 +14,15 @@ Top View of the PS4
 
 </div>
 
+# Installation
+Depend on your prefrence you can install this package using either one of these commands
+```
+python -m pip install AsynchronousPS4Controller
+python3 -m pip install AsynchronousPS4Controller
+pip install AsynchronousPS4Controller
+pip3 install AsynchronousPS4Controller
+```
+
 # Usage
 1. Connect your controller to Bluetooth.
 For the first time connecting, Hold the share button, then hold the PlayStation Button. The lights on the controller will blink rapidly. Open your bluetooth settings to add the device.
