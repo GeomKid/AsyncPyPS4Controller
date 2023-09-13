@@ -448,7 +448,6 @@ class Controller(BaseController):
             if os.path.exists(self.path):
                 print(f"Successfully reconnected to: {self.path}.")
                 on_connect_callback()
-                self._file = await aiofiles.open(self.path, "rb")
                 return
             await asyncio.sleep(0)
 
@@ -571,5 +570,7 @@ class Controller(BaseController):
             print("Interface lost. Device disconnected?")
             if self.re_listen:
                 await self.re_connect()
+                await asyncio.sleep(1)
+                self._file = await aiofiles.open(self.path, "rb")
                 return await self.read_events()
             exit(1)
