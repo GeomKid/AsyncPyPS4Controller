@@ -422,7 +422,7 @@ class Controller(BaseController):
                     value=value,
                     header=header,
                 )
-                await asyncio.sleep(0.01)
+                await asyncio.sleep(0)
                 event = await self.read_events()
         except KeyboardInterrupt:
             print("\nExiting (Ctrl + C)")
@@ -450,7 +450,7 @@ class Controller(BaseController):
                 on_connect_callback()
                 self._file = await aiofiles.open(self.path, "rb")
                 return
-            await asyncio.sleep(0.5)
+            await asyncio.sleep(0)
 
     def __handle_event(self, button_id, button_type, value, header):
         """
