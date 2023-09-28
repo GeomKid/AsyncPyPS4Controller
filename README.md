@@ -1,3 +1,17 @@
+<div align="center">
+
+   # AsynchronousPS4Controller
+   <br>
+
+   ![](https://img.shields.io/pypi/v/AsynchronousPS4Controller.svg?label=Version&logo=pypi)
+   ![](https://img.shields.io/badge/Python-3.9+-1081c1?logo=python)
+   [![](https://img.shields.io/pypi/dm/AsynchronousPS4Controller.svg?logo=python&label=Downloads)](https://pypi.org/project/AsynchronousPS4Controller/)
+
+   [![License](https://img.shields.io/badge/License-GPL-blue)](https://github.com/GeomKid/AsyncPyPS4Controller/blob/master/LICENSE)
+   [![](https://img.shields.io/badge/Docs-latest-x?logo=readthedocs)](https://geomkid.github.io/AsyncPyPS4Controller/)
+
+</div>
+
 # About
 A package to suit your non-blocking PS4 interface
 
