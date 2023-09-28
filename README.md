@@ -1,21 +1,8 @@
 # About
 A package to suit your non-blocking PS4 interface
 
-## PS4 Views
-<div align="center">
-
-![PS4 LED View](docs/img/PS4_LED_view.png)
-
-LED View of the PS4
-
-![PS4 Top View](docs/img/PS4_top_view.png)
-
-Top View of the PS4
-
-</div>
-
 # Installation
-Depend on your prefrence you can install this package using either one of these commands
+Depend on your preference you can install this package using either one of these commands
 ```
 python -m pip install AsynchronousPS4Controller
 python3 -m pip install AsynchronousPS4Controller
@@ -45,76 +32,26 @@ take a note of it as we will need it in next step.
 You will see output on your screen based on the input to your controller.
 You can bind your own logic to each one of those events.
 Lets say you want print "Hello world" on X press and "Goodbye world" on X release then the code would look like this:
-    ```python
-    import asyncio
-    from AsynchronousPS4Controller import Controller
+```python
+import asyncio
+from AsynchronousPS4Controller import Controller
 
-    class MyController(Controller):
-        def __init__(self, **kwargs):
-            Controller.__init__(self, **kwargs)
+class MyController(Controller):
+    def __init__(self, **kwargs):
+        Controller.__init__(self, **kwargs)
 
-        async def on_x_press(self):
-            print("Hello world")
+    async def on_x_press(self):
+        print("Hello world")
 
-        async def on_x_release(self):
-            print("Goodbye world")
+    async def on_x_release(self):
+        print("Goodbye world")
 
 
-    controller = MyController(path="/dev/input/js0")
+controller = MyController(path="/dev/input/js0")
 
-    # you can start listening before controller is paired, as long as you pair it within the timeout window
-    asyncio.run(controller.listen(timeout=30))
-    # you can start listening before controller is paired, as long as you pair it within the timeout window
-    asyncio.run(controller.listen(timeout=30))
-    ```
-
-    Here is a list of all the events you can override in a similar manner:
-    ```py
-    on_x_press
-    on_x_release
-    on_triangle_press
-    on_triangle_release
-    on_circle_press
-    on_circle_release
-    on_square_press
-    on_square_release
-    on_L1_press
-    on_L1_release
-    on_L2_press
-    on_L2_release
-    on_R1_press
-    on_R1_release
-    on_R2_press
-    on_R2_release
-    on_up_arrow_press
-    on_up_down_arrow_release
-    on_down_arrow_press
-    on_left_arrow_press
-    on_left_right_arrow_release
-    on_right_arrow_press
-    on_L3_up
-    on_L3_down
-    on_L3_left
-    on_L3_right
-    on_L3_x_at_rest  # Left joystick goes back to x-axis after moving
-    on_L3_y_at_rest  # Left joystick goes back to y-axis after moving
-    on_L3_press  # Left joystick is clicked.
-    on_L3_release  # Left joystick is released after the click.
-    on_R3_up
-    on_R3_down
-    on_R3_left
-    on_R3_right
-    on_R3_x_at_rest  # Right joystick goes back to x-axis after moving
-    on_R3_y_at_rest  # Right joystick goes back to y-axis after moving
-    on_R3_press  # Right joystick button is clicked.
-    on_R3_release  # Right joystick button is released after the click.
-    on_options_press
-    on_options_release
-    on_share_press
-    on_share_release
-    on_playstation_button_press
-    on_playstation_button_release
-    ```
+# you can start listening before controller is paired, as long as you pair it within the timeout window
+asyncio.run(controller.listen(timeout=30))
+```
 
 # Registering Callbacks
 It is possible to bound callbacks to the `listen` function.

@@ -1,21 +1,13 @@
 site_name: Asynchronous PS4 Controller
-# site_url: https://testing
 repo_url: https://github.com/GeomKid/AsyncPyPS4Controller
-# theme:
-#   name: material
-
-nav:
-  - Home: index.md
-  - About: about.md
-
 repo_name: /GeomKid/AsyncPyPS4Controller
 copyright: Copyright &copy; 2023 - Present Tan Chin Peng – <a href="#__consent">Change cookie settings</a>
 docs_dir: docs/src
 edit_uri: edit/stable/docs/src
+site_url: https://geomkid.github.io/AsyncPyPS4Controller/
 
 theme:
   name: material
-  #  custom_dir: docs/overrides
   features:
     - header.autohide
     - navigation.instant
@@ -52,12 +44,75 @@ theme:
   icon:
     repo: fontawesome/brands/github-alt
 
-  logo: images/logo-minified.svg
-  font:
-    code: Roboto Mono
+watch:
+  - AsynchronousPS4Controller
 
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/GeomKid/AsyncPyPS4Controller
       name: Github Repository
+plugins:
+  - search
+  - awesome-pages
+  - autorefs
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+      enable_creation_date: true
+  - git-committers:
+      repository: interactions-py/interactions.py
+      branch: stable
+  - mkdocstrings:
+      #    custom_templates: docs/templates
+      enable_inventory: true
+      handlers:
+        python:
+          selection:
+            inherited_members: True
+            filters:
+              - "!^_"
+          options:
+            filters:
+              - "!^_"
+          rendering:
+            members_order: source
+            show_bases: True
+            show_root_toc_entry: False
+            group_by_category: True
+            heading_level: 3
+            show_if_no_docstring: True
+  - minify:
+      minify_html: true
+
+markdown_extensions:
+  - meta
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.snippets:
+      base_path: docs/_snippets
+      check_paths: True
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.keys
+  - pymdownx.saneheaders
+  - pymdownx.smartsymbols
+  - pymdownx.tabbed
+  - pymdownx.tasklist
+  - pymdownx.tilde
+  - toc:
+      permalink: true
+      toc_depth: 6
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - abbr
+  - attr_list
+  - md_in_html

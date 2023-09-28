@@ -314,20 +314,23 @@ class BaseController:
 
 
 class Controller(BaseController):
+    """
+    Initiate controller instance that is capable of listening to all events on specified input path
+
+    Args:
+        path: The path of where your PS4 is connected to (IE `/dev/input/js0`)
+        debug: Enable Debug mode to print out some info
+        re_listen: Will the joystick relisten after disconnect
+    ???+ note "Note on `re_listen`"
+        The `re_listen` will be `True` whenever you declare it in `listen` or when initiating it
+    """
+
     def __init__(
         self,
         path: str,
         debug: bool = False,
         re_listen: bool = False,
     ):
-        """
-        Initiate controller instance that is capable of listening to all events on specified input path
-
-        Args:
-            path: The path of where your PS4 is connected to (IE `/dev/input/js0`)
-            debug: Enable Debug mode to print out some info
-            re_listen: Will the joystick relisten after disconnect
-        """
         BaseController.__init__(self)
         self.is_connected: bool = False
         self.path = path
