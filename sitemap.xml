@@ -2,42 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://geomkid.github.io/AsyncPyPS4Controller/</loc>
-         <lastmod>2023-09-28</lastmod>
+         <lastmod>2024-10-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://geomkid.github.io/AsyncPyPS4Controller/changelog/</loc>
-         <lastmod>2023-09-28</lastmod>
+         <lastmod>2024-10-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://geomkid.github.io/AsyncPyPS4Controller/API%20Refrences/API%20Refrences/Controller/</loc>
-         <lastmod>2023-09-28</lastmod>
+         <lastmod>2024-10-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://geomkid.github.io/AsyncPyPS4Controller/Guides/01%20Getting%20Started/</loc>
-         <lastmod>2023-09-28</lastmod>
+         <lastmod>2024-10-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://geomkid.github.io/AsyncPyPS4Controller/Guides/02%20PS4%20Views/</loc>
-         <lastmod>2023-09-28</lastmod>
+         <lastmod>2024-10-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://geomkid.github.io/AsyncPyPS4Controller/Guides/10%20%20Hardware%20Connection/</loc>
-         <lastmod>2023-09-28</lastmod>
+         <lastmod>2024-10-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://geomkid.github.io/AsyncPyPS4Controller/Guides/20%20Custom%20Controller%20Callbacks/</loc>
-         <lastmod>2023-09-28</lastmod>
+         <lastmod>2024-10-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://geomkid.github.io/AsyncPyPS4Controller/Guides/30%20Examples/</loc>
-         <lastmod>2023-09-28</lastmod>
+         <lastmod>2024-10-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
