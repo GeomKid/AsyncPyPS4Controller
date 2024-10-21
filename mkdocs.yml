@@ -3,7 +3,7 @@ repo_url: https://github.com/GeomKid/AsyncPyPS4Controller
 repo_name: /GeomKid/AsyncPyPS4Controller
 copyright: Copyright &copy; 2023 - Present Tan Chin Peng – <a href="#__consent">Change cookie settings</a>
 docs_dir: docs/src
-edit_uri: edit/stable/docs/src
+edit_uri: edit/unstable/docs/src
 site_url: https://geomkid.github.io/AsyncPyPS4Controller/
 
 theme:
@@ -60,7 +60,7 @@ plugins:
       fallback_to_build_date: true
       enable_creation_date: true
   - git-committers:
-      repository: interactions-py/interactions.py
+      repository: GeomKid/AsyncPyPS4Controller
       branch: stable
   - mkdocstrings:
       #    custom_templates: docs/templates
